@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/response.css">
+	<style>
+		*{margin: 0;padding: 0}
+		.inpit{background-image: url(./images/bg.jpg);background-repeat: repeat;position: relative;background-size: auto 100%;width: 100%;}
+		#inpitassembly{
+			width:100%;
+			box-sizing: border-box;
+			margin: 0;padding: 0;
+			background-color: rgba(0, 0, 0, 0)
+		}
+		#inpitassembly>h1{color: white;text-align: center;margin-top:25px;font-size:50px}
+		form>.li>div>input:hover{cursor: pointer;}
+		#inpitassembly>form>.li{
+			display:flex;flex-wrap:nowrap;justify-content:space-around
+		}
+		#inpitassembly>form>.li>p{color: white;font-size: 20px;}
+		#inpitassembly>form>.li>div{
+			width:20%;
+			height: 100px;
+			background-color: rgba(6, 6, 6, .3);color:rgb(240, 236, 236);
+			position:relative;
+		}
+		#inpitassembly>form>.li>.ack{color: white;background-color: #9c56f1}
+		#inpitassembly>form>.li>div>input{position:absolute;width:calc(100% + 4px);height:calc(100% + 4px);top:0;left:0;margin:0;padding:0;border:2px solid transparent;opacity: 0;
+		/* pointer-events:none */
+		}
+		.index{font-size: 35px;
+			color: #c6c6c7;
+			margin:0 40px;}
+		.index>input{width:30px;height: 30px;vertical-align: middle}
+		.index>label{margin-right: 10px}
+		.index>div{width: 20%;margin: 0 auto;margin-top: 50px}
+		.index>div>input{width:100%;height:100%;font-size: 50px}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<body class="inpit">
+		<div id="inpitassembly" formname="demonstration" data-stellar-background-ratio="0.5">
+			<h1>CUTV订餐系统</h1>
+			<form action="http://localhost:8080/post" method="POST" autocomplete="off">
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1" class="bre">
+						<h2>早餐</h2>
+						<p>星期一</p>
+						<input class="one" type="checkbox" value="monBre">
+					</div>
+					<div name="d-a" value="A1" class="lun">
+						<h2>午餐</h2>
+						<p>星期一</p>
+						<input class="one" type="checkbox" value="monLun">
+					</div>
+					<div name="d-a" value="A1" class="din">
+						<h2>晚餐</h2>
+						<p>星期一</p>
+						<input class="one" type="checkbox" value="monDin">
+					</div>
+					
+				</div>
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1" class="bre">
+						<h2>早餐</h2>
+						<p>星期二</p>
+						<input class="one" type="checkbox" value="tueBre">
+					</div>
+					<div name="d-a" value="A1" class="lun">
+						<h2>午餐</h2>
+						<p>星期二</p>
+						<input class="one" type="checkbox" value="tueLun">
+					</div>
+					<div name="d-a" value="A1" class="din">
+						<h2>晚餐</h2>
+						<p>星期二</p>
+						<input class="one" type="checkbox" value="tueDin">
+					</div>
+				</div>
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1" class="bre">
+						<h2>早餐</h2>
+						<p>星期三</p>
+						<input class="one" type="checkbox" value="wenBre">
+					</div>
+					<div name="d-a" value="A1" class="lun">
+						<h2>午餐</h2>
+						<p>星期三</p>
+						<input class="one" type="checkbox" value="wenLun">
+					</div>
+					<div name="d-a" value="A1" class="din">
+						<h2>晚餐</h2>
+						<p>星期三</p>
+						<input class="one" type="checkbox" value="wenDin">
+					</div>
+				</div>
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1" class="bre">
+						<h2>早餐</h2>
+						<p>星期四</p>
+						<input class="one" type="checkbox" value="thuBre">
+					</div>
+					<div name="d-a" value="A1" class="lun">
+						<h2>午餐</h2>
+						<p>星期四</p>
+						<input class="one" type="checkbox" value="thuLun">
+					</div>
+					<div name="d-a" value="A1" class="din">
+						<h2>晚餐</h2>
+						<p>星期四</p>
+						<input class="one" type="checkbox" value="thuDin">
+					</div>
+				</div>
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1" class="bre">
+						<h2>早餐</h2>
+						<p>星期五</p>
+						<input class="one" type="checkbox" value="friBre">
+					</div>
+					<div name="d-a" value="A1" class="lun">
+						<h2>午餐</h2>
+						<p>星期五</p>
+						<input class="one" type="checkbox" value="friLun">
+					</div>
+					<div name="d-a" value="A1" class="din">
+						<h2>晚餐</h2>
+						<p>星期五</p>
+						<input class="one" type="checkbox" value="friDin">
+					</div>
+				</div>
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1">
+						<h2>早餐</h2>
+						<p>星期六</p>
+						<input class="one" type="checkbox" value="satBre">
+					</div>
+					<div name="d-a" value="A1">
+						<h2>午餐</h2>
+						<p>星期六</p>
+						<input class="one" type="checkbox" value="satLun">
+					</div>
+					<div name="d-a" value="A1">
+						<h2>晚餐</h2>
+						<p>星期六</p>
+						<input class="one" type="checkbox" value="satDin">
+					</div>
+				</div>
+				<div class="li" radio>
+					<p></p>
+					<div name="d-a" value="A1">
+						<h2>早餐</h2>
+						<p>星期日</p>
+						<input class="one" type="checkbox" value="sunBre">
+					</div>
+					<div name="d-a" value="A1">
+						<h2>午餐</h2>
+						<p>星期日</p>
+						<input class="one" type="checkbox" value="sunLun">
+					</div>
+					<div name="d-a" value="A1">
+						<h2>晚餐</h2>
+						<p>星期日</p>
+						<input class="one" type="checkbox" value="sunDin">
+					</div>
+				</div>
+
+				<div class="index">
+					<p>默认选项仅限工作日（周一~周五）</p>
+					<input type="radio" id="only_bf" value="off"><label for="only_bf">默认早餐</label>
+					<input type="radio" id="only_lu" value="off"><label for="only_lu">默认午餐</label>
+					<input type="radio" id="only_di" value="off"><label for="only_di">默认晚餐</label>
+					<div>
+						<input type="submit" value="提交">
+					</div>
+				</div>
+				
+			</form>
+
+		
+		<script>
+			//获取本地下一周时间
+			var cells = [document.getElementsByClassName('li')[0].getElementsByTagName('p')[0],document.getElementsByClassName('li')[1].getElementsByTagName('p')[0],document.getElementsByClassName('li')[2].getElementsByTagName('p')[0],document.getElementsByClassName('li')[3].getElementsByTagName('p')[0],document.getElementsByClassName('li')[4].getElementsByTagName('p')[0],document.getElementsByClassName('li')[5].getElementsByTagName('p')[0],document.getElementsByClassName('li')[6].getElementsByTagName('p')[0]];
+			//document.getElementById('monitor').getElementsByTagName('td');
+			var clen = cells.length;
+			var currentFirstDate=new Date();
+			var formatDate = function(date){       
+				var year = date.getFullYear()+'年';
+				var month = (date.getMonth()+1)+'月';
+				var day = date.getDate()+'日';
+
+				return year+month+day
+			};
+			var addDate= function(date,n){    
+				date.setDate(date.getDate()+n);    
+				return date;
+			};
+			var setDate = function(date){       
+				var week = date.getDay()-1;
+				date = addDate(date,week*-1);
+				//currentFirstDate = new Date(date);
+
+				for(var i = 0;i<clen;i++){         
+				cells[i].innerHTML = formatDate(i==0 ? date : addDate(date,1));
+				}
+			};
+			// setDate(new Date());
+			setDate(addDate(currentFirstDate,7))
+
+			// var one=document.getElementsByClassName('one')[0];
+			// one.onclick=function(){
+			// 	console.log(one.checked)
+			// };
+			
+
+			//选中效果
+			$('.li div').click(function(){
+				var $this=$(this);
+				if($this.hasClass('bre')){
+					if($this.hasClass('ack')){
+						if(allBre==true){
+							allBre=false;
+							bf.value='off';
+							bf.checked=false;
+						};
+						$this.removeClass('ack');
+					}else{
+						$this.addClass('ack');
+						if($($('.bre')[0]).hasClass('ack')&$($('.bre')[1]).hasClass('ack')&$($('.bre')[2]).hasClass('ack')&$($('.bre')[3]).hasClass('ack')&$($('.bre')[4]).hasClass('ack')==1){
+							allBre=true;
+							bf.value='on';
+							bf.checked=true;
+						}
+					}
+				}else if($this.hasClass('lun')){
+					if($this.hasClass('ack')){
+						if(allLun==true){
+							allLun=false;
+							lu.value='off';
+							lu.checked=false;
+						};
+						$this.removeClass('ack');
+					}else{
+						$this.addClass('ack');
+						if($($('.lun')[0]).hasClass('ack')&$($('.lun')[1]).hasClass('ack')&$($('.lun')[2]).hasClass('ack')&$($('.lun')[3]).hasClass('ack')&$($('.lun')[4]).hasClass('ack')==1){
+							allLun=true;
+							lu.value='on';
+							lu.checked=true;
+						}
+					}
+				}else if($this.hasClass('din')){
+					if($this.hasClass('ack')){
+						if(allDin==true){
+							allDin=false;
+							di.value='off';
+							di.checked=false;
+						};
+						$this.removeClass('ack');
+					}else{
+						$this.addClass('ack');
+						if($($('.din')[0]).hasClass('ack')&$($('.din')[1]).hasClass('ack')&$($('.din')[2]).hasClass('ack')&$($('.din')[3]).hasClass('ack')&$($('.din')[4]).hasClass('ack')==1){
+							allDin=true;
+							di.value='on';
+							di.checked=true;
+						}
+					}
+				}else{
+					if($this.hasClass('ack')){
+						$this.removeClass('ack');
+					}else{
+						$this.addClass('ack');
+					}
+				}
+				
+			})
+			
+			//默认快捷按钮
+			var bf=document.getElementById('only_bf');
+			var bre=document.getElementsByClassName('bre');
+			var allBre=false
+			bf.onclick=function(e){
+				if(bf.value=='off'){
+					bf.value='on';bf.checked=true;
+					for(var i=0;i<bre.length;i++){
+						bre[i].getElementsByTagName('input')[0].checked=true;
+						bre[i].className='bre ack';
+					};
+					allBre=true
+				}
+				else{
+					bf.value='off';bf.checked=false;
+					for(var i=0;i<bre.length;i++){
+						bre[i].getElementsByTagName('input')[0].checked=false;
+						bre[i].className='bre'
+					};
+					allBre=false
+				};
+			};
+
+			var lu=document.getElementById('only_lu');
+			var lun=document.getElementsByClassName('lun');
+			var allLun=false;
+			lu.onclick=function(e){
+				if(lu.value=='off'){
+					lu.value='on';lu.checked=true;
+					for(var i=0;i<lun.length;i++){
+						lun[i].getElementsByTagName('input')[0].checked=true;
+						lun[i].className='lun ack'
+					};
+					allLun=true
+				}
+				else{
+					lu.value='off';lu.checked=false;
+					for(var i=0;i<lun.length;i++){
+						lun[i].getElementsByTagName('input')[0].checked=false;
+						lun[i].className='lun'
+					}
+					allLun=false;
+				}
+			};
+			var di=document.getElementById('only_di');
+			var din=document.getElementsByClassName('din');
+			var allDin=false
+			di.onclick=function(e){
+				if(di.value=='off'){
+					di.value='on';di.checked=true;
+					for(var i=0;i<din.length;i++){
+						din[i].getElementsByTagName('input')[0].checked=true;
+						din[i].className='din ack'
+					};
+					allDin=true
+				}
+				else{
+					di.value='off';di.checked=false;
+					for(var i=0;i<din.length;i++){
+						din[i].getElementsByTagName('input')[0].checked=false;
+						din[i].className='din'
+					}
+					allDin=false;
+				}
+			}
+		</script>
+	</body>
+</html>
